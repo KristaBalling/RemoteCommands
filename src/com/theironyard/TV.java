@@ -20,4 +20,5 @@ public class TV {
         this.channel = 3;
         System.out.println("Channel is set for VCR");
     }
+
 }

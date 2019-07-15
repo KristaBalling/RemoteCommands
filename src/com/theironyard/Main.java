@@ -4,6 +4,7 @@ public class Main {
 
     public static void main(String[] args) {
         RemoteControl remoteControl = new RemoteControl();
+        RemoteControlWithUndo remoteWithUndo = new RemoteControlWithUndo();
 
         Light livingRoomLight = new Light("Living Room");
         Light kitchenLight = new Light("Kitchen");
@@ -48,13 +49,23 @@ public class Main {
 
         System.out.println(remoteControl);
 
-        remoteControl.onButtonWasPushed(0);
-        remoteControl.offButtonWasPushed(0);
-        remoteControl.onButtonWasPushed(1);
-        remoteControl.offButtonWasPushed(1);
-        remoteControl.onButtonWasPushed(2);
-        remoteControl.offButtonWasPushed(2);
-        remoteControl.onButtonWasPushed(3);
-        remoteControl.offButtonWasPushed(3);
+//        remoteControl.onButtonWasPushed(0);
+//        remoteControl.offButtonWasPushed(0);
+//        remoteControl.onButtonWasPushed(1);
+//        remoteControl.offButtonWasPushed(1);
+//        remoteControl.onButtonWasPushed(2);
+//        remoteControl.offButtonWasPushed(2);
+//        remoteControl.onButtonWasPushed(3);
+//        remoteControl.offButtonWasPushed(3);
+
+        remoteWithUndo.onButtonWasPushed(0);
+        remoteWithUndo.offButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteWithUndo.undoButtonWasPushed();
+        remoteWithUndo.offButtonWasPushed(0);
+        remoteWithUndo.onButtonWasPushed(0);
+        System.out.println(remoteControl);
+        remoteWithUndo.undoButtonWasPushed();
+
     }
 }
